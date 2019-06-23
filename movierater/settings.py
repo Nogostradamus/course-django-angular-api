@@ -54,10 +54,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000', 'localhost:4200'
-)
-
 ROOT_URLCONF = 'movierater.urls'
 
 TEMPLATES = [
@@ -94,6 +90,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     }
 }
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:4200"
+]
 
 
 # Password validation
